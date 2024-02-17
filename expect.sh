@@ -10,10 +10,10 @@ set timeout -1
 
 spawn ssh -v -o "StrictHostKeyChecking no" -p 22 $USER@$HOST
 
-expect "$ "
+expect "$PROMPT"
 foreach command ${DOLLAR}commands {
   send "${DOLLAR}command\r"
-  expect "$ "
+  expect "$PROMPT"
 }
 
 send "exit\r"

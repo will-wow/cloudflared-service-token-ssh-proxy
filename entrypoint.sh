@@ -7,6 +7,7 @@ export DOLLAR="$"
 export CLIENT_ID=$4
 export CLIENT_SECRET=$5
 export KEY_TYPE=$8
+export PROMPT=$9
 
 envsubst < "/root/ssh-client.conf" > "/root/.ssh/config" 
 envsubst < "/root/expect.sh" > "/root/expect-final.sh" 

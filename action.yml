@@ -34,6 +34,10 @@ inputs:
     description: 'SSH key type, like id_rsa or id_ed25519'
     required: false
     default: 'id_rsa'
+  PROMPT:  # id of input
+    description: 'expected prompt from the remote system, which will be printed when a command completes'
+    required: false
+    default: '$ '
 # outputs:
 #   output: # id of output
 #     description: 'the output of the command'
@@ -49,3 +53,4 @@ runs:
     - ${{ inputs.PUBLIC_KEY }}
     - ${{ inputs.PRIVATE_KEY }}
     - ${{ inputs.KEY_TYPE }}
+    - ${{ inputs.PROMPT }}
